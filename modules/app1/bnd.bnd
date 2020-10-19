@@ -1,0 +1,4 @@
+Bundle-Name: app1
+Bundle-SymbolicName: app1
+Bundle-Version: 1.0.0
+Export-Package: app1.constants
