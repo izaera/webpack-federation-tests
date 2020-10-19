@@ -16,6 +16,7 @@ import org.osgi.service.component.annotations.Component;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.header-portlet-css=/css/main.css",
+		"com.liferay.portlet.header-portlet-javascript=/js/main.js",
 		"com.liferay.portlet.instanceable=true",
 		"javax.portlet.display-name=App1",
 		"javax.portlet.init-param.template-path=/",
