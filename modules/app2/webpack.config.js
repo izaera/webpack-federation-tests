@@ -22,33 +22,13 @@ module.exports = {
 		),
 		publicPath: '/o/app2/js/',
 	},
-	module: {
-		rules: [
-			{
-				test: /\.jsx?$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
-				options: {
-					presets: ['@babel/preset-react'],
-				},
-			},
-		],
-	},
 	plugins: [
 		new ModuleFederationPlugin({
 			name: 'app2',
 			library: { type: 'var', name: 'app2' },
 			filename: 'remoteEntry.js',
 			exposes: {
-				'./Button': './src/main/js/Button',
-			},
-			shared: {
-				react: {
-					singleton: true,
-				},
-				'react-dom': {
-					singleton: true,
-				},
+				'./greetings': './src/main/js/greetings',
 			},
 		}),
 		// new HtmlWebpackPlugin({

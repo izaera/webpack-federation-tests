@@ -22,31 +22,11 @@ module.exports = {
 		),
 		publicPath: '/o/app1/js/',
 	},
-	module: {
-		rules: [
-			{
-				test: /\.jsx?$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
-				options: {
-					presets: ['@babel/preset-react'],
-				},
-			},
-		],
-	},
 	plugins: [
 		new ModuleFederationPlugin({
 			name: 'app1',
 			remotes: {
 				app2: 'app2@/o/app2/js/remoteEntry.js',
-			},
-			shared: {
-				react: {
-					singleton: true,
-				},
-				'react-dom': {
-					singleton: true,
-				},
 			},
 		}),
 		// new HtmlWebpackPlugin({

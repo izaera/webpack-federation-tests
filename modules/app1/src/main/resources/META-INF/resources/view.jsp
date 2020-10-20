@@ -4,5 +4,5 @@
 	<b>
 		<liferay-ui:message key="app1.caption" />
 	</b>
-<div id="app1"></div>
+	<div id="app1"></div>
 </p>
