@@ -1,0 +1,14 @@
+<html>
+  <head> 
+  </head>
+  <body>
+    <div id="app1"></div>
+    <script>
+      if(window.location.search !== "") {
+        document.write(
+          '<div id="app2">This DIV will make webpack federation fail</div>'
+        );
+      }
+    </script>
+  </body>
+</html>
