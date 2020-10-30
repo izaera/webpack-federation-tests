@@ -28,6 +28,7 @@ module.exports = {
 			library: { type: 'var', name: 'app2' },
 			filename: 'remoteEntry.js',
 			exposes: {
+				'./index': './src/main/js/index',
 				'./greetings': './src/main/js/greetings',
 			},
 			shared: {

@@ -1,10 +1,11 @@
-import greetings from 'app2/greetings';
+import greetings2 from 'app2/greetings';
 import isObject from 'is-object';
 
 const node = document.getElementById('_app1b_');
 
 node.innerHTML = `
-	${greetings()} from app1b.js
+	app2/greetings says: ${greetings2()}
 	<br>
-	${isObject}
+	is-object says: ${isObject()}
+	<br>
 `;

@@ -25,11 +25,17 @@ module.exports = {
 	plugins: [
 		new ModuleFederationPlugin({
 			name: 'app1b',
+			// library: { type: 'var', name: 'app1b' }, // this makes bundled code fail
+			filename: 'remoteEntry.js',
+			exposes: {
+				'./index': './src/main/js/index',
+				'./greetings': './src/main/js/greetings',
+			},
 			remotes: {
 				app2: 'app2@/o/app2/js/remoteEntry.js',
 			},
 			shared: {
-				'is-object': {},
+				// 'is-object': {},
 			},
 		}),
 		// new HtmlWebpackPlugin({

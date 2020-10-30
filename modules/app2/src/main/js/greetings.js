@@ -1,3 +1,4 @@
 import isObject from 'is-object';
 
-export default () => `[Greetings ${isObject}]`;
+export default () =>
+	`I'm greetings from app2 and my isObject says: ${isObject()}`;
