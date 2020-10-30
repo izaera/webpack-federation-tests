@@ -30,6 +30,9 @@ module.exports = {
 			exposes: {
 				'./greetings': './src/main/js/greetings',
 			},
+			shared: {
+				'is-object': {},
+			},
 		}),
 		// new HtmlWebpackPlugin({
 		// 	template: './public/index.html',

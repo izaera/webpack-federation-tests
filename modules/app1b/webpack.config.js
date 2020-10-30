@@ -20,11 +20,11 @@ module.exports = {
 			'resources',
 			'js'
 		),
-		publicPath: '/o/app1/js/',
+		publicPath: '/o/app1b/js/',
 	},
 	plugins: [
 		new ModuleFederationPlugin({
-			name: 'app1',
+			name: 'app1b',
 			remotes: {
 				app2: 'app2@/o/app2/js/remoteEntry.js',
 			},
